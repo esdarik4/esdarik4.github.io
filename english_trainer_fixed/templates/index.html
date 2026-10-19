@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Тренажёр английских слов</title>
+</head>
+<body>
+<h1>Тренажёр английских слов</h1>
+
+<form method="post" action="/add">
+<input name="english" placeholder="English">
+<input name="russian" placeholder="Русский">
+<button type="submit">Добавить</button>
+</form>
+
+<h2>Список слов</h2>
+{% for w in words %}
+<div><b>{{w[1]}}</b> — {{w[2]}}</div>
+{% endfor %}
+</body>
+</html>
